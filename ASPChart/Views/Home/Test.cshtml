@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Drill Chart Page";
+}
+
+@section StyleSheets {
+
+}
+
+@section Scripts {
+    <script type="text/javascript" src="~/lib/hightcharts/highcharts.js"></script>
+    <script type="text/javascript" src="~/lib/hightcharts/modules/drilldown.js"></script>
+    <script type="text/javascript" src="~/js/home/drill-charts.js" asp-append-version="true"></script>
+}
+
+@*@model List<MemberDataModel>*@
+
+<h2>@ViewData["Title"]</h2>
+
+@*@foreach (var members in Model)
+{
+    <li>@members.FirstName: @members.LastName</li>
+}*@
+
+<div>
+    <input id="inputValue" value="" />
+    <div id="container" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
+    <div id="searchValue" style="display:none">@ViewData["param"]</div>
+
+</div>
+
